@@ -29,6 +29,9 @@
 		EEC78E7721FC2155006D453A /* APIErrorParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC78E7621FC2155006D453A /* APIErrorParam.swift */; };
 		EEC78E7A21FC21BC006D453A /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC78E7921FC21BC006D453A /* Int+.swift */; };
 		EEC78E7F21FC236E006D453A /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC78E7E21FC236E006D453A /* LoginResponse.swift */; };
+		EEC78E8621FC9ABA006D453A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC78E8521FC9ABA006D453A /* DashboardViewController.swift */; };
+		EEC78E8821FC9AC6006D453A /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC78E8721FC9AC6006D453A /* DashboardPresenter.swift */; };
+		EEC78E8A21FC9B01006D453A /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC78E8921FC9B01006D453A /* UIViewController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		EEC78E7621FC2155006D453A /* APIErrorParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorParam.swift; sourceTree = "<group>"; };
 		EEC78E7921FC21BC006D453A /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 		EEC78E7E21FC236E006D453A /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		EEC78E8521FC9ABA006D453A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		EEC78E8721FC9AC6006D453A /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
+		EEC78E8921FC9B01006D453A /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,7 @@
 		EE564CB321FA03C900A6836E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EEC78E8421FC9AA2006D453A /* Dashboard */,
 				EEC78E6321FA0897006D453A /* MVP.swift */,
 				EE564CA521FA03BE00A6836E /* Main.storyboard */,
 				EE564CB421FA03D700A6836E /* Login */,
@@ -205,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				EEC78E7921FC21BC006D453A /* Int+.swift */,
+				EEC78E8921FC9B01006D453A /* UIViewController+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,6 +238,15 @@
 				EEC78E7E21FC236E006D453A /* LoginResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		EEC78E8421FC9AA2006D453A /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				EEC78E8521FC9ABA006D453A /* DashboardViewController.swift */,
+				EEC78E8721FC9AC6006D453A /* DashboardPresenter.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEC78E8621FC9ABA006D453A /* DashboardViewController.swift in Sources */,
 				EEC78E7A21FC21BC006D453A /* Int+.swift in Sources */,
 				EE564CBA21FA040700A6836E /* LoginViewController.swift in Sources */,
 				EEC78E7F21FC236E006D453A /* LoginResponse.swift in Sources */,
@@ -388,8 +406,10 @@
 				EEC78E5E21FA067C006D453A /* AppAssembler.swift in Sources */,
 				EEC78E7321FC1DE0006D453A /* ErrorOperator.swift in Sources */,
 				EE564CB821FA03F700A6836E /* LoginViewPresenter.swift in Sources */,
+				EEC78E8821FC9AC6006D453A /* DashboardPresenter.swift in Sources */,
 				EEC78E7021FC1C42006D453A /* Constants.swift in Sources */,
 				EEC78E6621FA0B35006D453A /* API.swift in Sources */,
+				EEC78E8A21FC9B01006D453A /* UIViewController+.swift in Sources */,
 				EEC78E6821FA0B4D006D453A /* UserRepo.swift in Sources */,
 				EEC78E6E21FC148C006D453A /* StringEncryptor.swift in Sources */,
 				EEC78E6B21FC142D006D453A /* LoginParam.swift in Sources */,
