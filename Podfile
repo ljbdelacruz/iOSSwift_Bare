@@ -16,5 +16,7 @@ target 'iOSBaseCode' do
     pod 'Moya-ObjectMapper/RxSwift', '2.8'
     pod 'ObjectMapper', '3.4.2';
     pod 'FCUUID', '1.3.1'
-    pod 'SwiftyRSA', '1.5.0 '
+    pod 'SwiftyRSA', '1.5.0'
+    
+    pod 'SwiftKeychainWrapper', '3.2.0'
 end

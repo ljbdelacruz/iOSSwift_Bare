@@ -31,7 +31,7 @@ extension MyService: TargetType {
     var path: String {
         switch self{
             case .login:
-                return "/v1/user/login"
+                return "/v1/user/auth"
         }
     }
     
@@ -49,7 +49,7 @@ extension MyService: TargetType {
     var task: Task {
         switch self{
         case .login(let params):
-            return .requestParameters(parameters: params.toJSON(), encoding: URLEncoding(destination: .queryString))
+            return .requestParameters(parameters: params.toJSON(), encoding: URLEncoding(destination: .httpBody))
         }
     }
     
@@ -67,8 +67,11 @@ extension MyService: TargetType {
             return ["Authorization": headerBasicAuthUser,
                     "X-Device-Id": uuid,
                     "X-Device-Notification-Id": uuidNotification,
-                    "Content-Type": "application/json"]
+                    "Content-Type": "application/x-www-form-urlencoded"]
         }
     }
 
 }
+
+
+

@@ -24,7 +24,7 @@ class AppAssembler {
 
 extension AppAssembler {
     func initialViewController() -> LoginViewController {
-        let sb = SwinjectStoryboard.create(name: "Login", bundle: nil)
+        let sb = SwinjectStoryboard.create(name: "Main", bundle: nil)
         let vc = sb.instantiateInitialViewController() as! LoginViewController
         return vc
     }

@@ -23,14 +23,13 @@ class DataAssembly: Assembly {
 //            NetworkLoggerPlugin(verbose: true)
 //            }.inObjectScope(.container)
 //
-//        container.register(AeonApi.self) { (r) in
-//            let service = AeonApi(plugins: [
-//                r.resolve(NetworkLoggerPlugin.self)!])
-//            return service
-//        }
+        container.register(MyAPI.self) { (r) in
+            let service = MyAPI()
+            return service
+        }
 //
 //        // Repository
-//        //        container.autoregister(UserRepository.self, initializer: UserRepository.init).inObjectScope(.container)
+        container.autoregister(UserRepository.self, initializer: UserRepository.init).inObjectScope(.container)
 //        container.autoregister(MerchantRepository.self, initializer: MerchantRepository.init).inObjectScope(.container)
 //        container.autoregister(NotificationsRepository.self, initializer: NotificationsRepository.init).inObjectScope(.container)
 //        container.autoregister(OtpRepository.self, initializer: OtpRepository.init).inObjectScope(.container)

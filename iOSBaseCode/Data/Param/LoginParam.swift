@@ -16,17 +16,17 @@ class LoginParam: Mappable {
     var password: String?
     var grantType: String?
     var scope: String?
-    init(username: String, password: String) {
+    init(username: String, password: String){
         self.username = username
-        let encryptor = StringEncryptor()
-        self.password = encryptor.encrypt(message: password)
+//use this when you acquire public key from your server
+//        let encryptor = StringEncryptor()
+//        self.password = encryptor.encrypt(message: password)
+        self.password=password;
         self.grantType = defaultValues.grantType
         self.scope = defaultValues.scope
     }
-    
     required init?(map: Map) {
     }
-    
     func mapping(map: Map) {
         username <- map["username"]
         password <- map["password"]

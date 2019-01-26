@@ -22,6 +22,7 @@ PODS:
   - RxAtomic (4.4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
+  - SwiftKeychainWrapper (3.2.0)
   - SwiftyRSA (1.5.0):
     - SwiftyRSA/ObjC (= 1.5.0)
   - SwiftyRSA/ObjC (1.5.0)
@@ -38,6 +39,7 @@ DEPENDENCIES:
   - Moya-ObjectMapper/RxSwift (= 2.8)
   - Moya/RxSwift (= 12.0.1)
   - ObjectMapper (= 3.4.2)
+  - SwiftKeychainWrapper (= 3.2.0)
   - SwiftyRSA (= 1.5.0)
   - Swinject (= 2.5.0)
   - SwinjectAutoregistration (= 2.5.1)
@@ -53,6 +55,7 @@ SPEC REPOS:
     - Result
     - RxAtomic
     - RxSwift
+    - SwiftKeychainWrapper
     - SwiftyRSA
     - Swinject
     - SwinjectAutoregistration
@@ -68,12 +71,13 @@ SPEC CHECKSUMS:
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
   SwiftyRSA: 6e528fb1b1a87d5111c48081083b141d6d65f1cf
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
   SwinjectAutoregistration: f72bf894cbd2ee4a9153e00fa5208e93fb44d283
   SwinjectStoryboard: 688f096033103e66ffcf6ca678211acd7d7be505
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
 
-PODFILE CHECKSUM: 1b3051a4dcb195936b4c159d833792a03c401ef1
+PODFILE CHECKSUM: acfbced0322e851d1fdf8c3d6d2e4d200cdb7474
 
 COCOAPODS: 1.5.3

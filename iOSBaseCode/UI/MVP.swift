@@ -6,6 +6,7 @@
 //  Copyright © 2019 Lainel John Dela Cruz. All rights reserved.
 //
 import Foundation
+import UIKit
 
 protocol BaseView: class {
     
@@ -25,4 +26,16 @@ class BasePresenter {
         self.view = nil
     }
     
+}
+
+
+class BaseViewController:UIViewController{
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(BaseViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
