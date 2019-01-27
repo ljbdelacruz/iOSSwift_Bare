@@ -5,23 +5,18 @@
 //  Created by Lainel John Dela Cruz on 24/01/2019.
 //  Copyright © 2019 Lainel John Dela Cruz. All rights reserved.
 //
-
 import UIKit
-
 class LoginViewController: UIViewController {
-    
     @IBOutlet weak var UILoginAC: UIActivityIndicatorView!
     @IBOutlet weak var UIEmailTF: UITextField!
     @IBOutlet var UIPasswordTF: UITextField!
     @IBOutlet weak var UILoginButton: UIButton!
-    
     var presenter: LoginPresenter!
     override func viewDidLoad() {
         self.setupUI()
         super.viewDidLoad()
         presenter.attachView(view: self)
     }
-
 }
 
 extension LoginViewController: LoginView{
@@ -29,6 +24,8 @@ extension LoginViewController: LoginView{
         print("Success Authentication login");
         self.hideAI();
         self.enableInteractivity();
+//        performSegue(withIdentifier: "toDashboardSegue", sender: nil);
+        performSegue(withIdentifier: "toTabView", sender: nil);
     }
     func showAuthFailed(message:String) {
         print("Failed Authentication login");
@@ -66,6 +63,11 @@ extension LoginViewController{
         self.UIEmailTF.isEnabled=true;
         self.UIPasswordTF.isEnabled=true;
         self.UILoginButton.isEnabled=true;
+    }
+}
+//MARK: Segue Handler
+extension LoginViewController{
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
 }
 

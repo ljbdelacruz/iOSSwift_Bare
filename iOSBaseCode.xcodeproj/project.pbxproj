@@ -15,6 +15,12 @@
 		EE564CAC21FA03BF00A6836E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE564CAA21FA03BF00A6836E /* LaunchScreen.storyboard */; };
 		EE564CB821FA03F700A6836E /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE564CB721FA03F700A6836E /* LoginViewPresenter.swift */; };
 		EE564CBA21FA040700A6836E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE564CB921FA040700A6836E /* LoginViewController.swift */; };
+		EEA2997E21FDCA3F0081EEC3 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA2997D21FDCA3F0081EEC3 /* TabViewController.swift */; };
+		EEA2998221FDCAC40081EEC3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA2998121FDCAC40081EEC3 /* HomeViewController.swift */; };
+		EEA2998421FDCB040081EEC3 /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA2998321FDCB040081EEC3 /* HomeViewPresenter.swift */; };
+		EEA2998621FDCB7B0081EEC3 /* ShowsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA2998521FDCB7B0081EEC3 /* ShowsRepo.swift */; };
+		EEA2998821FDCBCB0081EEC3 /* ShowsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA2998721FDCBCB0081EEC3 /* ShowsResponse.swift */; };
+		EEA2998B21FDCD0C0081EEC3 /* ShowSearchParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA2998A21FDCD0C0081EEC3 /* ShowSearchParam.swift */; };
 		EEC78E5E21FA067C006D453A /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC78E5D21FA067C006D453A /* AppAssembler.swift */; };
 		EEC78E6021FA0823006D453A /* DataAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC78E5F21FA0823006D453A /* DataAssembly.swift */; };
 		EEC78E6221FA085B006D453A /* PresentationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC78E6121FA085B006D453A /* PresentationAssembly.swift */; };
@@ -47,6 +53,12 @@
 		EE564CAD21FA03BF00A6836E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE564CB721FA03F700A6836E /* LoginViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
 		EE564CB921FA040700A6836E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EEA2997D21FDCA3F0081EEC3 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		EEA2998121FDCAC40081EEC3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EEA2998321FDCB040081EEC3 /* HomeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
+		EEA2998521FDCB7B0081EEC3 /* ShowsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsRepo.swift; sourceTree = "<group>"; };
+		EEA2998721FDCBCB0081EEC3 /* ShowsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsResponse.swift; sourceTree = "<group>"; };
+		EEA2998A21FDCD0C0081EEC3 /* ShowSearchParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSearchParam.swift; sourceTree = "<group>"; };
 		EEC78E5D21FA067C006D453A /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
 		EEC78E5F21FA0823006D453A /* DataAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAssembly.swift; sourceTree = "<group>"; };
 		EEC78E6121FA085B006D453A /* PresentationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAssembly.swift; sourceTree = "<group>"; };
@@ -132,6 +144,7 @@
 		EE564CB321FA03C900A6836E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EEA2997A21FDC9A20081EEC3 /* Home */,
 				EEC78E8421FC9AA2006D453A /* Dashboard */,
 				EEC78E6321FA0897006D453A /* MVP.swift */,
 				EE564CA521FA03BE00A6836E /* Main.storyboard */,
@@ -167,8 +180,35 @@
 			isa = PBXGroup;
 			children = (
 				EEC78E6721FA0B4D006D453A /* UserRepo.swift */,
+				EEA2998521FDCB7B0081EEC3 /* ShowsRepo.swift */,
 			);
 			path = Repo;
+			sourceTree = "<group>";
+		};
+		EEA2997A21FDC9A20081EEC3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EEA2997F21FDCAA50081EEC3 /* TabView */,
+				EEA2997D21FDCA3F0081EEC3 /* TabViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EEA2997F21FDCAA50081EEC3 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				EEA2998021FDCAAA0081EEC3 /* Home */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		EEA2998021FDCAAA0081EEC3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EEA2998121FDCAC40081EEC3 /* HomeViewController.swift */,
+				EEA2998321FDCB040081EEC3 /* HomeViewPresenter.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		EEC78E5C21FA065E006D453A /* Dependendency_inject */ = {
@@ -187,6 +227,7 @@
 				EEC78E6A21FC142D006D453A /* LoginParam.swift */,
 				EEC78E7421FC203F006D453A /* RefreshTokenParam.swift */,
 				EEC78E7621FC2155006D453A /* APIErrorParam.swift */,
+				EEA2998A21FDCD0C0081EEC3 /* ShowSearchParam.swift */,
 			);
 			path = Param;
 			sourceTree = "<group>";
@@ -236,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				EEC78E7E21FC236E006D453A /* LoginResponse.swift */,
+				EEA2998721FDCBCB0081EEC3 /* ShowsResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -397,24 +439,30 @@
 			files = (
 				EEC78E8621FC9ABA006D453A /* DashboardViewController.swift in Sources */,
 				EEC78E7A21FC21BC006D453A /* Int+.swift in Sources */,
+				EEA2998621FDCB7B0081EEC3 /* ShowsRepo.swift in Sources */,
 				EE564CBA21FA040700A6836E /* LoginViewController.swift in Sources */,
 				EEC78E7F21FC236E006D453A /* LoginResponse.swift in Sources */,
 				EE564CA421FA03BE00A6836E /* ViewController.swift in Sources */,
 				EE564CA221FA03BE00A6836E /* AppDelegate.swift in Sources */,
+				EEA2998221FDCAC40081EEC3 /* HomeViewController.swift in Sources */,
 				EEC78E6221FA085B006D453A /* PresentationAssembly.swift in Sources */,
 				EEC78E6021FA0823006D453A /* DataAssembly.swift in Sources */,
 				EEC78E5E21FA067C006D453A /* AppAssembler.swift in Sources */,
 				EEC78E7321FC1DE0006D453A /* ErrorOperator.swift in Sources */,
 				EE564CB821FA03F700A6836E /* LoginViewPresenter.swift in Sources */,
+				EEA2998B21FDCD0C0081EEC3 /* ShowSearchParam.swift in Sources */,
 				EEC78E8821FC9AC6006D453A /* DashboardPresenter.swift in Sources */,
 				EEC78E7021FC1C42006D453A /* Constants.swift in Sources */,
+				EEA2997E21FDCA3F0081EEC3 /* TabViewController.swift in Sources */,
 				EEC78E6621FA0B35006D453A /* API.swift in Sources */,
 				EEC78E8A21FC9B01006D453A /* UIViewController+.swift in Sources */,
 				EEC78E6821FA0B4D006D453A /* UserRepo.swift in Sources */,
 				EEC78E6E21FC148C006D453A /* StringEncryptor.swift in Sources */,
 				EEC78E6B21FC142D006D453A /* LoginParam.swift in Sources */,
+				EEA2998821FDCBCB0081EEC3 /* ShowsResponse.swift in Sources */,
 				EEC78E7721FC2155006D453A /* APIErrorParam.swift in Sources */,
 				EEC78E7521FC203F006D453A /* RefreshTokenParam.swift in Sources */,
+				EEA2998421FDCB040081EEC3 /* HomeViewPresenter.swift in Sources */,
 				EEC78E6421FA0897006D453A /* MVP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

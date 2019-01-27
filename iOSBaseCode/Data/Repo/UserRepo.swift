@@ -24,9 +24,6 @@ class UserRepository {
             .asObservable()
             .mapErrors(provider: service)
             .do(onNext: { (response) in
-                let obj = try response.mapObject(LoginResponse.self)
-//                Keychain.instance.passwordGrantedToken = obj.accessToken
-//                Keychain.instance.refreshToken = obj.refreshToken
                 UIApplication.shared.registerForRemoteNotifications()
             })
             .mapObject(LoginResponse.self)

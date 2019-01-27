@@ -27,9 +27,6 @@ class DashboardPresenter: BasePresenter {
     func Authorize(email:String, password:String){
         let param=LoginParam(username: email, password: password);
         self.userRepository.login(params: param).subscribe(onNext: { user in
-            print(user.accessToken);
-            print(user.tokenType);
-            print(user.scope);
             self.getView()?.showAuthSuccess()
         }, onError: { (error) in
             self.getView()?.showAuthFailed(message: error.localizedDescription)

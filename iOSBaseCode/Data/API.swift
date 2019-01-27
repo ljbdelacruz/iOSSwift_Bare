@@ -21,6 +21,7 @@ class MyAPI: MoyaProvider<MyService> {
 
 enum MyService  {
     case login(params:LoginParam)
+    case showSearch(params:ShowSearchParam)
 }
 
 extension MyService: TargetType {
@@ -31,7 +32,10 @@ extension MyService: TargetType {
     var path: String {
         switch self{
             case .login:
-                return "/v1/user/auth"
+                return "/dummy/user/auth"
+            case .showSearch(let params):
+                print(params.title!);
+                return "dummy/shows/"+params.title!
         }
     }
     
@@ -39,18 +43,22 @@ extension MyService: TargetType {
         switch self {
         case .login:
             return .post;
+        case .showSearch:
+            return .get;
         }
     }
-    
     var sampleData: Data {
         return "{}".data(using: .utf8)!
     }
-    
     var task: Task {
         switch self{
         case .login(let params):
             return .requestParameters(parameters: params.toJSON(), encoding: URLEncoding(destination: .httpBody))
+        case .showSearch(let params):
+            return .requestPlain
+//            return .requestParameters(parameters: params.toJSON(), encoding: URLEncoding(destination: .queryString))
         }
+        
     }
     
     var headers: [String : String]? {
@@ -64,6 +72,11 @@ extension MyService: TargetType {
         let uuidNotification = "FCM TOKEN SET HERE" // blank string for deleted token.
         switch self{
         case .login:
+            return ["Authorization": headerBasicAuthUser,
+                    "X-Device-Id": uuid,
+                    "X-Device-Notification-Id": uuidNotification,
+                    "Content-Type": "application/x-www-form-urlencoded"]
+        case .showSearch:
             return ["Authorization": headerBasicAuthUser,
                     "X-Device-Id": uuid,
                     "X-Device-Notification-Id": uuidNotification,
